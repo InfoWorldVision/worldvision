@@ -8,6 +8,8 @@ import IntraocularLenses from "./Pages/our-products/intraocular-lenses/Intraocul
 import Hydrophobic from "./Pages/our-products/intraocular-lenses/children/Hydrophobic/Hydrophobic";
 import Hydrophilic from "./Pages/our-products/intraocular-lenses/children/Hydrophilic/Hydrophilic";
 import Pmma from "./Pages/our-products/intraocular-lenses/children/Pmma/Pmma";
+import MonofocalHydrophobicIol from "./Pages/our-products/intraocular-lenses/children/Hydrophobic/children/MonofocalHydrophobicIol/MonofocalHydrophobicIol";
+import Aboutus from "./Pages/Aboutus";
 
 const intraocularLensesApi = [
    {
@@ -26,18 +28,10 @@ const intraocularLensesApi = [
       path: "our-products/intraocular-lenses/pmma-iol",
       element: <Pmma />
    },
-   // {
-   //    path: "our-products/intraocular-lenses/hydrophobic-iol/monofocal-hydrophobic-iol",
-   //    element: <MonofocalHydrophobicIol />
-   // },
-   // {
-   //    path: "our-products/veterinary",
-   //    element: <Veterinary />
-   // },
-   // {
-   //    path: "our-products/veterinary/veterinary-iol",
-   //    element: <VeterinaryIol />
-   // }
+   {
+      path: "our-products/intraocular-lenses/hydrophobic-iol/monofocal-hydrophobic-iol",
+      element: <MonofocalHydrophobicIol />
+   },
 ]
 
 
@@ -51,8 +45,11 @@ export const router = createBrowserRouter([
             index: true,
             element: <Home />
          },
+         {
+            path: "/aboutus",
+            element: <Aboutus />
+         },
          ...intraocularLensesApi
-
       ]
    }
 ]);
